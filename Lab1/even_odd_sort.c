@@ -1,5 +1,5 @@
 // Took Help from Internet 
-// Did not completely do it by myself only this file.
+// this file is not completely done by myself, reference and help is used.
 
 
 #include <stdio.h>
