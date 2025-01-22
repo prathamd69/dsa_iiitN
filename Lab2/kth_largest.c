@@ -14,31 +14,62 @@ int main() {
 
     int arr[n];
 
+    printf("Array is : ");
     for (int i = 0; i < n; i++) {
-        arr[i] = rand() % (100) + 1;
+        arr[i] = rand() % (10) + 1;
     }
+
+    int min = arr[0];
+    int max = arr[0];
 
     for (int i = 0; i < n; i++) {
         printf("%d ", arr[i]);
+        if(arr[i]<min){
+            min = arr[i];
+        }
     }
 
     int temp;
-    int max;
+    int track = min-1 ;
+    int count = 0;
 
-    if (k <= n) {
-        for (int i = 0; i < k; i++) {
+  if (k <= n) {
+        while(1) {
             max = arr[0];
             for (int j = 0; j < n; j++) {
-                if (arr[j] > max) {
+                if (arr[j] >= max) {
                     max = arr[j];
                     temp = j;
                 }
             }
+            
+            if (track == max){
+                count--;
+                
+            }
+            
+            track = max;
+            arr[temp] = min-1;
+            count++;
+            
+            if(count>=k){
+                break;
+            }
+            else{
+                continue;
+            }
 
-            arr[temp] = -1;
 
         }
-        printf("\n%d", max);
+        if (max>=min){
+        printf("\nKth largest value is %d", max);}
+        else{
+        printf("\nInvalid Input");
+    }
+    }
+
+    else{
+        printf("\nInvalid Input");
     }
 
 
