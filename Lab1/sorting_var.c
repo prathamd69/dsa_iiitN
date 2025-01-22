@@ -31,9 +31,7 @@ int main() {
 
         printf("\nSort all even indices - 1");
         printf("\nSort all odd indices  - 2");
-        printf("\nSort all even elements  - 3");
-        printf("\nSort all of odd elements - 4");
-        printf("\nNone - 5");
+        printf("\nNone - 3");
 
         printf("\n\nEnter: ");
         scanf("%d", & x);
@@ -97,23 +95,8 @@ int main() {
 
         }
 
-        if (x == 3) {
-
-
-        }
-
-        if (x == 4) {
-
-
-
-        }
-
-        if (x == 5) {
+        else if (x == 3) {
             break;
-        }
-
-        else if (x > 5 || x < 1) {
-            printf("\nInvalid Input");
         }
 
     }
