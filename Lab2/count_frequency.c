@@ -13,11 +13,17 @@ int main(){
     for (int i = 0; i < n; i++) {
     arr[i] = rand() % (5) + 1;
     }
+
+    int max = arr[0];
     
     for (int i = 0; i < n; i++) {
     printf("%d ",arr[i]);
+        if(arr[i] > max){
+            max = arr[i];
+        }
     }
-    int k = -1;
+    
+    int k = max+1;
     int j = 0;
     for (j;j<n;j++){
         
