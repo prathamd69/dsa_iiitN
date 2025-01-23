@@ -13,6 +13,7 @@ int main() {
 
     int arr[n];
     int arr2[n];
+    int arr_final[n];
     int unique = 0;
     int freq[n];
 
@@ -94,6 +95,7 @@ int main() {
         // printf("\n%d %d\n",temp,max2);
         for (int j = 0; j < max2; j++) {
             printf("%d ", arr2[temp]);
+            arr_final[track] = arr2[temp];
             track++;
             // printf("\n%d\n",track);
 
