@@ -1,6 +1,4 @@
 // Took Help from Internet 
-// this file is not completely done by myself, reference and help is used.
-
 
 #include <stdio.h>
 #include <stdlib.h>
