@@ -4,17 +4,23 @@
 
 int main() {
 
-    int n = 7;
-    int k = 3;
+    int n;
+    printf("Enter the value of n - ");
+    scanf("%d",&n);
+    
+    int k;
+    printf("Enter the value of k - ");
+    scanf("%d",&k);
+    
     int i, j;
     int temp = k;
+    
     int arr[n][n];
-
     int final[n][n];
 
     for (i = 0; i < n; i++) {
         for (j = 0; j < n; j++) {
-            arr[i][j] = rand() % (5) + 1;
+            arr[i][j] = rand() % (10) + 1;
         }
     }
 
