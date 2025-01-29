@@ -5,11 +5,11 @@
 int main() {
 
     int n;
-    printf("Enter the value of n - ");
+    printf("Enter the value of n (odd) - ");
     scanf("%d",&n);
     
     int k;
-    printf("Enter the value of k - ");
+    printf("Enter the value of k (odd) - ");
     scanf("%d",&k);
     
     int i, j;
@@ -20,7 +20,7 @@ int main() {
 
     for (i = 0; i < n; i++) {
         for (j = 0; j < n; j++) {
-            arr[i][j] = rand() % (10) + 1;
+            arr[i][j] = rand() % (5) + 1;
         }
     }
 
@@ -47,24 +47,24 @@ int main() {
     while (temp < n + 1) {
         i = beta;
         // printf("\ntemp = %d, beta = %d, i = %d\n",temp,beta,i);
-        k = 3;
+        int q = k;
         int alpha = 0;
-        while (k < n + 1) {
+        while (q < n + 1) {
 
             sum = 0;
             j = alpha;
             //  printf("\nk = %d, alpha = %d, j = %d\n",k,alpha,j);
 
             for (i = beta; i < temp; i++) {
-                for (j = alpha; j < k; j++) {
+                for (j = alpha; j < q; j++) {
                     sum += arr[i][j];
                 }
             }
 
             // printf("\n%d = sum", sum);
-            final[count][(alpha + k) / 2] = sum / 9;
+            final[count][(alpha + q) / 2] = sum / (k*k);
 
-            k++;
+            q++;
             alpha++;
 
         }
