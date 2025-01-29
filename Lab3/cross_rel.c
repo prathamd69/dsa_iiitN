@@ -74,15 +74,16 @@ int main() {
             sum = 0;
             j = alpha;
             //  printf("\nk = %d, alpha = %d, j = %d\n",k,alpha,j);
-            int track1 = -1;
+            int track1 = 0;
             
             for (i = beta; i < temp; i++) {
-                track1++;
+                
                 int track2 = 0;
                 for (j = alpha; j < q; j++) {
                     sum += arr[i][j]*change[track1][track2];
                     track2++;
                 }
+                track1++;
             }
 
             // printf("\n%d = sum", sum);
