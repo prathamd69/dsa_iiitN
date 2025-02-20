@@ -30,13 +30,13 @@ struct node* append(struct node* head, int new_data) {
         return new_node;
     }
 
-    struct node* last = head;
+    struct node* temp = head;
 
-    while (last->next != NULL) {
-        last = last->next;
+    while (temp->next != NULL) {
+        temp = temp->next;
     }
 
-    last->next = new_node;
+    temp->next = new_node;
     return head;
 }
 
