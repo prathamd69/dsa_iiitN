@@ -40,26 +40,60 @@ struct node* append(struct node* head, int new_data) {
     temp->next = new_node;
     return head;
 }
+struct node* concatenate(struct node* head1, struct node* head2) {
+    if (head1 == NULL) {
+        return head2; 
+    }
 
+    struct node* temp = head1;
+
+    while (temp->next != NULL) {
+        temp = temp->next;
+    }
+
+    temp->next = head2;
+
+    return head1;}
 int main() {
   
     int element;
-    struct node *head = NULL;
+    struct node *head1 = NULL;
+    struct node *head2 = NULL;
     
     while(1){
         printf("Enter next element or -1 : ");
         scanf("%d", &element);
         
         if (element != -1){
-            head = append(head,element);
+            head1 = append(head1,element);
             continue;
         }
         else{
             break;
         }
     }
-    printf("\n\nYour enterted Linked List is : ");
-    printList(head);
+
+    while (1) {
+        printf("Enter 2nd list next element: ");
+        scanf("%d", &element);
+
+        if (element == -1) {
+            break;
+        }
+
+        head2 = append(head2, element);
+    }
+    
+    printf("\nFirst Linked List: ");
+    printList(head1);
+    printf("\nSecond Linked List: ");
+    printList(head2);
+    
+    head1 = concatenate(head1, head2);
+
+    printf("\nConcatenated Linked List: ");
+    printList(head1);
+
 
     return 0;
 }
