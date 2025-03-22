@@ -1,16 +1,17 @@
-// Implement stack using array and perform following operations:
-// 1. Push      2. Pop      
-// Properly handle overflow and underflow conditions.
+/*
+Implement stack using array and perform following operations:
+1. Push      2. Pop      
+Properly handle overflow and underflow conditions.
 
 
-// Implement stack using singly LL.
-// Implement stack using doubly LL.
-// Convert prefix expression into postfix expression.
-// Write an function to evaluate postfix expression using stack.
-// Write a program using stack to check whether parenthesis are balanced?
+Implement stack using singly LL.
+Implement stack using doubly LL.
+Convert prefix expression into postfix expression.
+Write an function to evaluate postfix expression using stack.
+Write a program using stack to check whether parenthesis are balanced?
 
-// Using stack check whether string is palindrome or not?
-
+Using stack check whether string is palindrome or not?
+*/
 
 #include <stdio.h>
 
@@ -96,69 +97,70 @@ int main() {
     return 0;
 }
 
+/*
+Results 
 
-// Results 
+Enter the element (-1 to stop): 1
+Enter the element (-1 to stop): 2
+Enter the element (-1 to stop): 3
+Enter the element (-1 to stop): 4
+Enter the element (-1 to stop): -1
 
-// Enter the element (-1 to stop): 1
-// Enter the element (-1 to stop): 2
-// Enter the element (-1 to stop): 3
-// Enter the element (-1 to stop): 4
-// Enter the element (-1 to stop): -1
+Your stack list is: 4 3 2 1 
 
-// Your stack list is: 4 3 2 1 
+1. Push
+2. Pop
+3. Exit
+Enter your choice: 1
+Enter the element to be pushed: 5
 
-// 1. Push
-// 2. Pop
-// 3. Exit
-// Enter your choice: 1
-// Enter the element to be pushed: 5
+Your stack list is: 5 4 3 2 1 
 
-// Your stack list is: 5 4 3 2 1 
+1. Push
+2. Pop
+3. Exit
+Enter your choice: 1
+Enter the element to be pushed: 20
+Overflow
 
-// 1. Push
-// 2. Pop
-// 3. Exit
-// Enter your choice: 1
-// Enter the element to be pushed: 20
-// Overflow
+Your stack list is: 5 4 3 2 1 
 
-// Your stack list is: 5 4 3 2 1 
+1. Push
+2. Pop
+3. Exit
+Enter your choice: 3
 
-// 1. Push
-// 2. Pop
-// 3. Exit
-// Enter your choice: 3
+Your stack list is: 5 4 3 2 1 
 
-// Your stack list is: 5 4 3 2 1 
+Enter the element (-1 to stop): 1
+Enter the element (-1 to stop): 2
+Enter the element (-1 to stop): -1
 
-// Enter the element (-1 to stop): 1
-// Enter the element (-1 to stop): 2
-// Enter the element (-1 to stop): -1
+Your stack list is: 2 1 
 
-// Your stack list is: 2 1 
+1. Push
+2. Pop
+3. Exit
+Enter your choice: 2
 
-// 1. Push
-// 2. Pop
-// 3. Exit
-// Enter your choice: 2
+Your stack list is: 1 
 
-// Your stack list is: 1 
+1. Push
+2. Pop
+3. Exit
+Enter your choice: 2
+Stack is empty
 
-// 1. Push
-// 2. Pop
-// 3. Exit
-// Enter your choice: 2
-// Stack is empty
+1. Push
+2. Pop
+3. Exit
+Enter your choice: 2
+Underflow
+Stack is empty
 
-// 1. Push
-// 2. Pop
-// 3. Exit
-// Enter your choice: 2
-// Underflow
-// Stack is empty
-
-// 1. Push
-// 2. Pop
-// 3. Exit
-// Enter your choice: 3
-// Stack is empty
+1. Push
+2. Pop
+3. Exit
+Enter your choice: 3
+Stack is empty
+*/
