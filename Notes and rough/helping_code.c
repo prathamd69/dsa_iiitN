@@ -1,3 +1,9 @@
+/* I have used AI with some of my code to help me understand the process of generating a stack using singly Linked List 
+    The job is intented to be done by using ** (2 pointers) instead of * (pointer).
+
+    The use of AI is solely for understanding and comparing code.
+*/
+
 #include <stdio.h>
 #include <stdlib.h>
 

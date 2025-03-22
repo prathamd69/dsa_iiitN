@@ -79,68 +79,69 @@ int main() {
     return 0;
 }
 
+/*
+Results 
 
-// Results 
+1. Push
+2. Pop
+3. Exit
+Enter your entry: 1
+Enter the value to push: 10
 
-// 1. Push
-// 2. Pop
-// 3. Exit
-// Enter your entry: 1
-// Enter the value to push: 10
+Pushed: 10
+Stack: 10 
 
-// Pushed: 10
-// Stack: 10 
+1. Push
+2. Pop
+3. Exit
+Enter your entry: 1
+Enter the value to push: 20
 
-// 1. Push
-// 2. Pop
-// 3. Exit
-// Enter your entry: 1
-// Enter the value to push: 20
+Pushed: 20
+Stack: 20 10 
 
-// Pushed: 20
-// Stack: 20 10 
+1. Push
+2. Pop
+3. Exit
+Enter your entry: 1
+Enter the value to push: 30
 
-// 1. Push
-// 2. Pop
-// 3. Exit
-// Enter your entry: 1
-// Enter the value to push: 30
+Pushed: 30
+Stack: 30 20 10 
 
-// Pushed: 30
-// Stack: 30 20 10 
+1. Push
+2. Pop
+3. Exit
+Enter your entry: 2
 
-// 1. Push
-// 2. Pop
-// 3. Exit
-// Enter your entry: 2
+Popped: 30
+Stack: 20 10 
 
-// Popped: 30
-// Stack: 20 10 
+1. Push
+2. Pop
+3. Exit
+Enter your entry: 2
 
-// 1. Push
-// 2. Pop
-// 3. Exit
-// Enter your entry: 2
+Popped: 20
+Stack: 10 
 
-// Popped: 20
-// Stack: 10 
+1. Push
+2. Pop
+3. Exit
+Enter your entry: 2
 
-// 1. Push
-// 2. Pop
-// 3. Exit
-// Enter your entry: 2
+Popped: 10
+Stack is empty
+1. Push
+2. Pop
+3. Exit
+Enter your entry: 2
+Stack Underflow
 
-// Popped: 10
-// Stack is empty
-// 1. Push
-// 2. Pop
-// 3. Exit
-// Enter your entry: 2
-// Stack Underflow
-
-// Stack is empty
-// 1. Push
-// 2. Pop
-// 3. Exit
-// Enter your entry: 3
-// Stack is empty
+Stack is empty
+1. Push
+2. Pop
+3. Exit
+Enter your entry: 3
+Stack is empty
+*/
