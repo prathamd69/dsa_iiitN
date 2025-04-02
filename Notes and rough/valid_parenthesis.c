@@ -34,7 +34,7 @@ int main() {
             push(&top, n, stack, data);
         } else if (data == ')') {
             if (top == -1) {
-                printf("False\n"); // Unbalanced
+                printf("False\n");
                 return 0;
             }
             pop(&top);
@@ -42,9 +42,9 @@ int main() {
     }
 
     if (top == -1) {
-        printf("True\n"); // Balanced
+        printf("True\n");
     } else {
-        printf("False\n"); // Unbalanced
+        printf("False\n"); 
     }
 
     return 0;
