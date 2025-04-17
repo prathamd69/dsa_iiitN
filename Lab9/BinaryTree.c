@@ -26,6 +26,9 @@ struct node{
     struct node* left, *right;
 };
 
+int nodes = 0;
+int leafs = 0;
+
 struct node* createNode(int val) {
     struct node* new_node = (struct node*)malloc(sizeof(struct node));
     new_node->data = val;
@@ -71,6 +74,22 @@ void postorder(struct node* root){
 }
 
 
+void count(struct node* root){
+            
+    if (root == NULL){
+        return;
+    }
+    
+    if (root->left == NULL && root->right == NULL) {
+        leafs++;
+    }
+
+    
+    nodes ++;
+    count(root->left);
+    count(root->right);
+}
+
 int main(){
     struct node* root = NULL;
     root = make_node();
@@ -83,8 +102,15 @@ int main(){
     
     printf("\nPostorder - ");
     postorder(root);
-}
 
+    printf("\n");
+    count(root);
+    printf("\ntotal nodes == %d",nodes);
+    
+    printf("\n");
+    printf("\nleaf nodes == %d",leafs);
+    
+}
 /*
 
 Output - 
@@ -109,5 +135,37 @@ Enter right child of 13 - Enter value (-1 to stop): -1
 Inorder - 7, 8, 9, 10, 11, 12, 13, 
 Preorder - 10, 8, 7, 9, 12, 11, 13, 
 Postorder - 7, 9, 8, 11, 13, 12, 10, 
+
+*/
+
+/*
+Enter value (-1 to stop): 1
+Enter left child of 1 - Enter value (-1 to stop): 2
+Enter left child of 2 - Enter value (-1 to stop): 3
+Enter left child of 3 - Enter value (-1 to stop): -1
+Enter right child of 3 - Enter value (-1 to stop): -1
+Enter right child of 2 - Enter value (-1 to stop): 4
+Enter left child of 4 - Enter value (-1 to stop): -1
+Enter right child of 4 - Enter value (-1 to stop): -1
+Enter right child of 1 - Enter value (-1 to stop): 5
+Enter left child of 5 - Enter value (-1 to stop): 6
+Enter left child of 6 - Enter value (-1 to stop): -1
+Enter right child of 6 - Enter value (-1 to stop): -1
+Enter right child of 5 - Enter value (-1 to stop): 7
+Enter left child of 7 - Enter value (-1 to stop): 8
+Enter left child of 8 - Enter value (-1 to stop): -1
+Enter right child of 8 - Enter value (-1 to stop): -1
+Enter right child of 7 - Enter value (-1 to stop): 9
+Enter left child of 9 - Enter value (-1 to stop): -1
+Enter right child of 9 - Enter value (-1 to stop): -1
+
+
+Inorder - 3, 2, 4, 1, 6, 5, 8, 7, 9, 
+Preorder - 1, 2, 3, 4, 5, 6, 7, 8, 9, 
+Postorder - 3, 4, 2, 6, 8, 9, 7, 5, 1, 
+
+total nodes == 9
+
+leaf nodes == 5
 
 */
